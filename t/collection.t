@@ -379,6 +379,7 @@ is($obj->{data}, 3.3);
 
     $ok = $coll->update({}, {'$inc' => {x => 2}}, {safe => 1});
     is($ok, 1);
+    # XXX last_error is misnamed -- should be last_result or something
     is($db->last_error->{n}, 1);
 }
 
