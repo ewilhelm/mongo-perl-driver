@@ -530,6 +530,7 @@ sub remove {
             _old_ensure_index(@_);
 
             my $db = substr($ns, 0, index($ns, '.'));
+            # XXX is this an error or a warning?
             $self->_last_error({"ok" => 0, "err" => "you're using the old ".
                 "format for ensure_index, please check the documentation and ".
                 "update your code"});
